@@ -18,7 +18,7 @@ export const seedLibrary = sdk.setupOnInit(async (effects, kind) => {
   await sdk.SubContainer.withTemp(
     effects,
     { imageId: 'calibre-web' },
-    dataMounts().mountAssets({
+    dataMounts(null).mountAssets({
       subpath: null,
       mountpoint: '/assets',
       type: 'directory',
