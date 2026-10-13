@@ -9,6 +9,8 @@ export const main = sdk.setupMain(async ({ effects }) => {
   const adminPassword = await storeJson
     .read((s) => s.adminPassword)
     .const(effects)
+  const libraryPath = await storeJson.read((s) => s.libraryPath).const(effects)
+  const mounts = dataMounts(libraryPath)
   if (!adminPassword) {
     throw new Error('The admin password has not been set')
   }
@@ -23,7 +25,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
       subcontainer: sdk.SubContainer.of(
         effects,
         { imageId: 'calibre-web' },
-        dataMounts(),
+        mounts,
         'set-admin-password-sub',
       ),
       exec: {
@@ -37,7 +39,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
       subcontainer: sdk.SubContainer.of(
         effects,
         { imageId: 'calibre-web' },
-        dataMounts(),
+        mounts,
         'calibre-web-sub',
       ),
       exec: {

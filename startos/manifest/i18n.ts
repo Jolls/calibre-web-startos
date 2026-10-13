@@ -23,3 +23,16 @@ export const long = {
   fr_FR:
     "Calibre-Web propose une bibliothèque Calibre via une interface web claire : parcourez par auteur, série ou étiquette, lisez les livres dans le navigateur, téléchargez-les et ajoutez-en de nouveaux. Un flux OPDS est aussi disponible pour les applications de lecture. Il fonctionne sans l'application de bureau Calibre.",
 }
+
+export const nextexplorerDescription = {
+  en_US:
+    'Stores the Calibre library in a NextExplorer folder, which Nextcloud can show through External Storage.',
+  es_ES:
+    'Guarda la biblioteca de Calibre en una carpeta de NextExplorer, que Nextcloud puede mostrar mediante Almacenamiento externo.',
+  de_DE:
+    'Speichert die Calibre-Bibliothek in einem NextExplorer-Ordner, den Nextcloud über externen Speicher anzeigen kann.',
+  pl_PL:
+    'Przechowuje bibliotekę Calibre w folderze NextExplorer, który Nextcloud może pokazać przez Pamięć zewnętrzną.',
+  fr_FR:
+    'Stocke la bibliothèque Calibre dans un dossier NextExplorer, que Nextcloud peut afficher via le stockage externe.',
+}
